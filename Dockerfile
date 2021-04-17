@@ -6,7 +6,8 @@ RUN apt-get update && apt-get install -y \
     rm -rf /var/lib/apt/lists/*
 COPY . /usr/local/src/templateapp
 WORKDIR /usr/local/src/templateapp
-RUN make build && \
+RUN cargo build 
+# && \
 #    make test && \
 #    make package
 
