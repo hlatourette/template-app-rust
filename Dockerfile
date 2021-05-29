@@ -16,6 +16,9 @@ RUN cargo build
 # WORKDIR /usr/local/src/templateapp/build
 # RUN dpkg -i templateapp-Linux.deb
 
+
+# need another stage that does cargo build --release before packaging
+
 # FROM ubuntu:latest as publisher
 # COPY --from=tester /usr/local/src/templateapp/build/...deb ....
 # test the install ... dpkg -i .deb
